@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background: hsl(0, 0%, 95%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: calc(100% - 40px);
+    max-width: 970px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 50px;
+    height: 100%;
+}
+
+.card:nth-child(1) {
+    background: hsl(31, 77%, 52%);
+}
+
+.card:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3) {
+    background: hsl(179, 100%, 13%);
+}
+
+.card__icon {
+    margin-bottom: 40px;
+}
+
+.card__title {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.card__description {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 90px;
+}
+
+.card__btn {
+    display: inline-block;
+    background: hsl(0, 0%, 95%);
+    text-decoration: none;
+    padding: 12px 26px;
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 50px;
+    transition: .2s ease-in;
+}
+
+.card:nth-child(1) .card__btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.card:nth-child(2) .card__btn {
+    color: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3) .card__btn {
+    color: hsl(179, 100%, 13%);
+}
+
+.card:nth-child(1) .card__btn:hover,
+.card:nth-child(2) .card__btn:hover,
+.card:nth-child(3) .card__btn:hover {
+    color: hsl(0, 0%, 95%);
+    background: transparent;
+}
+
+@media screen and (max-width: 920px) {
+    .card {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    .card__icon,
+    .card__title,
+    .card__description {
+        margin-bottom: 35px;
+    }
+}
